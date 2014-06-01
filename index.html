@@ -44,16 +44,29 @@
 </header>
 
 <section id="filters">
-  <p class="title">
-    Filter
-    <span class="endcap"></span>
-  </p>
-  <ul>
-    <li><span id="boundaryTitle">Neighborhood</span>: <span id="filters_area"></span></li>
-    <li>Service: <span id="filters_service"></span></li>
-    <li>Status: <span id="filters_status"></span></li>
-  </ul>
-  <button id="filters_clear">Clear</button>
+    <p class="title">
+      Filter
+      <span class="endcap"></span>
+    </p>
+    <ul>
+      <li>
+        <label id="boundaryTitle">Neighborhood</label>: 
+        <select name="neighborhood" id="neighborhood">
+        <option>All</option>
+        </select>
+      </li>
+      <li><label> Service:</label>
+        <select name="request_type" id="request_type">
+        <option>All</option>
+        </select></li>
+      </li>
+      <li><label>Status:</label>
+        <select name="status" id="status">
+        <option>All</option>
+        </select></li>
+      </li>
+    </ul>
+    <button id="filters_clear">Clear</button>
 </section>
 
 <section id="map">
@@ -82,9 +95,10 @@
   ================================================== -->
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+  <script src="js/filterbarcontroller.js"></script>
   <script src="js/kc_311_map.js"></script>
   <script src="js/multiselector.js"></script>
- <script src="js/filterbarcontroller.js"></script>
+ 
 
   
   
