@@ -22,8 +22,8 @@
   <!-- CSS
   ================================================== -->
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="/assets/css/filterbar.css">
-  <link rel="stylesheet" href="/assets/css/multiselector.css">
+  <link rel="stylesheet" href="css/filterbar.css">
+  <link rel="stylesheet" href="css/multiselector.css">
 
   <!-- Favicons
   ================================================== -->
@@ -49,7 +49,7 @@
     <span class="endcap"></span>
   </p>
   <ul>
-    <li><span id="boundaryTitle">Ward</span>: <span id="filters_area"></span></li>
+    <li><span id="boundaryTitle">Neighborhood</span>: <span id="filters_area"></span></li>
     <li>Service: <span id="filters_service"></span></li>
     <li>Status: <span id="filters_status"></span></li>
   </ul>
@@ -63,9 +63,7 @@
 
   <section id="legend-info">
     <h1>San Francisco</h1>
-    <!-- Changing the contents of the p tag will not change the tag file. 
-         Go instead to the config file to change the text. -->
-    <p></p>
+    <p>311 Service requests available through the city's open data portal data.sfgov.org.</p>
   </section>
 
   <section id="legend-newly-opened" class="legend-status active">
@@ -85,6 +83,10 @@
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
   <script src="js/kc_311_map.js"></script>
+  <script src="js/multiselector.js"></script>
+ <script src="js/filterbarcontroller.js"></script>
+
+  
   
 
 <!-- End Document

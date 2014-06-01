@@ -89,7 +89,7 @@ header a:hover {
 	top: 68px;
 	right: 0;
 	bottom: 0;
-  z-index:-1;
+  z-index:0;
 }
 
 #legend {
@@ -230,10 +230,7 @@ header a:hover {
     float: none;
     font-size: 80%;
   }
-  
-  #filters {
-    
-  }
+
 
   section#legend-newly-opened {
     clear: left;
@@ -300,7 +297,7 @@ a.leaflet-control-center{
   position:relative;
   left:-9px;
   top:5px;
-  background-image: url(/assets/img/center.png);
+  background-image: url(images/center.png);
   background-position: 0px 0px;
 }
 a.leaflet-control-center:hover{
@@ -322,4 +319,8 @@ a.leaflet-control-center:hover{
 
 .leaflet-container .leaflet-control-attribution {
   margin-bottom: 130px;
+}
+
+.leaflet-control-zoom .leaflet-bar .leaflet-control{
+  margin-top: 65px;
 }

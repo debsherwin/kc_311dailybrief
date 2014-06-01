@@ -50,7 +50,12 @@ function add_yesterdays_markers(open_or_closed){
         var latitude = data[i].point.latitude;
         var longitude = data[i].point.longitude;
         markerLocation = new L.LatLng(parseFloat(latitude), parseFloat(longitude));
+        if (data[i].media_url === undefined) {
         var marker = new L.Marker(markerLocation, {icon: marker_color}).bindPopup(data[i].request_type+', '+data[i].opened);
+        }
+        else {
+        var marker = new L.Marker(markerLocation, {icon: marker_color}).bindPopup(data[i].request_type+', '+data[i].opened+', <img src='+data[i].media_url.url+' style="width:100px;"/>');
+        }
         open_cases_list.push(marker);
       }
       var open_cases_layer = new L.LayerGroup(open_cases_list);
