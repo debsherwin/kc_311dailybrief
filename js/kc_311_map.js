@@ -53,9 +53,6 @@ var cases_list = [];
   		}
   	}
 
-// fake date for demo until Socrata is fixed
-	month = 5
-	day = 27
 
 
   var yesterday = d.getFullYear() + '-' +
@@ -80,6 +77,8 @@ var cases_list = [];
 
       for (i in data){
       	console.log(current_neighborhood);
+      	console.log(current_status);
+      	console.log(current_request_type);
       	if ( ((current_neighborhood === 'All') || (data[i].neighborhood === current_neighborhood)) && ((current_request_type === 'All') || (data[i].request_type === current_request_type)) && ((current_status === 'All') || (data[i].status === current_status))) {
 	        var latitude = data[i].point.latitude;
 	        var longitude = data[i].point.longitude;
@@ -140,7 +139,7 @@ add_yesterdays_markers('closed');
 //Filter by selection
 $('#neighborhood, #request_type, #status').change(function() {
   current_neighborhood = $('#neighborhood').val();
-  current_service = $('#request_type').val();
+  current_request_type = $('#request_type').val();
   current_status = $('#status').val();
   remove_points();
   add_yesterdays_markers('opened');
